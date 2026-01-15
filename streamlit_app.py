@@ -19,8 +19,8 @@ else:
         client = OpenAI(api_key=openai_api_key)
         client.models.list()
     except:
-        st.warning("API key not valid ")
-        st.stop 
+        st.error("API key not valid ")
+        st.stop()
 
     # Let the user upload a file via `st.file_uploader`.
     uploaded_file = st.file_uploader(
